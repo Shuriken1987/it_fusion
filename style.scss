@@ -1,0 +1,194 @@
+@import 'variables';
+@import 'basic';
+@import 'mixins';
+
+
+/******************
+nav
+******************/
+nav {
+    background: transparent;
+    margin-top: 20px;
+    .navbar-brand {
+        flex: 1;
+        img {
+            width: 60%;
+            @media(max-width: 767px) {
+                width: 40%;
+            }
+        }
+    }
+    .nav-link {
+        text-transform: uppercase;
+        color: $white;
+        letter-spacing: 1px;
+        transition: $transitions;
+        &:hover {
+            text-shadow: 0 0 10px $secondaryColor;
+        }
+    }
+    .burgerMeni {
+        color: $white;
+    }
+}
+.stickyAdd {
+    background: $primaryColor;
+    box-shadow: 0 2px 10px 5px rgba($black, .5);
+    transition: $transitions;
+    margin-top: 0;
+} 
+
+/******************
+mainHeader
+******************/
+.mainHeader {
+    background-image: linear-gradient(rgba($black, .7), rgba($black, .7)), url(img/header3.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+    @media(max-width: 767px) {
+        height: 40vh;
+    }
+}
+/******************
+intro
+******************/
+.intro {
+    background: $primaryColor;
+    margin: -100px auto 0 auto;
+    padding: 60px 70px 20px 70px;
+    color: $white;
+    h1 {
+        font-size: 7rem;
+        margin-top: -170px;
+        font-weight: 800;
+        text-shadow: 0 0 10px $secondaryColor;
+        line-height: 1;
+        @media(max-width:767px) {
+            font-size: 3rem;
+        }
+    }
+    h3 {
+        font-weight: 600;
+        color: $secondaryColor;
+        text-shadow: 0 0 1px $white;
+        @media(max-width:767px) {
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+    }
+}
+/******************
+services
+******************/
+.services  {
+    h3 {
+        font-weight: 800;
+    }
+    .service1, .service4 {
+        background: $secondaryColor;
+        padding: 40px;
+    }
+    .service3, .service6 {
+        background: $primaryColor;
+        padding: 40px;
+    }
+    .service2, .service5 {
+        background: $lightGray;
+        padding: 40px;
+    }
+    .col-md-4:nth-child(2) {
+        margin-top: 70px;
+    }
+    .col-md-4:nth-child(3) {
+        margin-top: 140px;
+    }
+}
+/******************
+about
+******************/
+.about {
+    background: url(img/bg3.jpg);
+    background-position: center;
+    background-size: cover;
+    .carousel-caption {
+        bottom: 15%;
+        p {
+            @media(max-width: 767px) {
+                font-size: .8rem;
+            }
+        }
+        @media(max-width: 767px) {
+            bottom: 5%;
+        }
+    }
+    h2 {
+        font-size: 6rem;
+        font-weight: 800;
+        transform: rotate(270deg);
+        margin-top: 150px;
+        @media(max-width: 767px) {
+            transform: rotate(0deg);
+            margin-top: 0px;
+        }
+    }
+}
+/******************
+footer
+******************/
+footer {
+    padding: 100px 0;
+    background-image: url(img/footer.jpg);
+    background-position: center;
+    background-size: cover;
+    a {
+        color: $black;
+        font-size: 3rem;
+        margin-right: 10px;
+        &:hover {
+            color: $white;
+            transition-duration: .7s;
+        }
+        i:hover {
+            animation: animacija .7s ease;
+        }
+        @keyframes animacija {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    }
+    img {
+        @media(max-width: 767px) {
+            width: 300px;
+            margin-bottom: 20px;
+        }
+    }
+}
+/******************
+.howDoWeWork
+******************/
+.howDoWeWork {
+    .col-md-4 {
+        h2 {
+            transform: rotate(270deg);
+            font-size: 6rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+        p {
+            margin-top: 50px;
+        }
+    }
+    .col-md-8 {
+        h2 {
+            font-weight: 800;
+        }
+        hr {
+            background: $secondaryColor;
+            border: none;
+            height: 2px;
+            margin: 30px 0;
+        }
+    }
+}
